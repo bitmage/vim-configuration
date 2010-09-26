@@ -1,6 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/brandonmason/Projects/Testbed/ruby/mapi/features/step_definitions'
-let g:netrw_dirhist_2='/Users/brandonmason/Projects/Testbed/ruby/mapi'
-let g:netrw_dirhist_3='/Users/brandonmason/Projects/Testbed/ruby'
-let g:netrw_dirhist_4='/Users/brandonmason/Projects/Testbed/ruby/mapi'
+let g:netrw_dirhist_cnt =0
