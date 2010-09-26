@@ -9,5 +9,7 @@ highlight NonText guibg=grey80
 highlight Constant guibg=grey90
 highlight Special gui=NONE guibg=grey90
 highlight StatusLine gui=bold guifg=white guibg=blue
+set gfn=Menlo
+colorscheme mustang
 
 
