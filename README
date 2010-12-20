@@ -4,5 +4,13 @@ SETUP:
 Clone the repo.  Rename it to .vim and move it to your home directory.  Symlink the .vimrc and .gvimrc files to your home directory.  Make a 'bundle' subdirectory and git-clone any vim plugins you'd like to use.
 
 
+Recommended Bundles:
+
+git://github.com/scrooloose/nerdcommenter.git
+git://github.com/tpope/vim-surround.git
+git://github.com/tpope/vim-cucumber.git
+git://github.com/tpope/vim-fugitive.git
+git://github.com/tpope/vim-rails.git
+
 USE:
 Once you're set up, just run vim.  Pathogen will take care of loading your plugins.
