@@ -73,6 +73,7 @@ nnoremap <leader>eh <C-w><C-v><C-l>:e ~/<cr>
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader>p :r !pbpaste<cr>
+nnoremap <leader>r :FufRenewCache<cr>
 nnoremap <leader>t :FufCoverageFile<cr>
 "nnoremap <leader>cc !cucumber %:line(".")<cr>
 "nnoremap <leader>n <Esc>:let @*=line(".")<CR>
