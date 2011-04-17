@@ -67,8 +67,9 @@ nnoremap <leader>a :Ack
 nnoremap <leader>ft Vatzf
 nnoremap <leader>v V`]
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
-nnoremap <leader>ee <C-w><C-v><C-l>:e .<cr>
 nnoremap <leader>eg <C-w><C-v><C-l>:e $MYGVIMRC<cr>
+nnoremap <leader>ee <C-w><C-v><C-l>:e .<cr>
+nnoremap <leader>eh <C-w><C-v><C-l>:e ~/<cr>
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader>p :r !pbpaste<cr>
@@ -80,12 +81,14 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+command! W w !sudo tee % >/dev/null
+
 "misc
 let g:netrw_liststyle = 3 "display folders in treeview
 let g:ackprg="ack -H --nocolor --nogroup --column"
 
 "reload config files when changed
 if has("autocmd")
-  autocmd bufwritepost *vimrc  source $MYVIMRC
-  autocmd bufwritepost *gvimrc source $MYGVIMRC
+  "autocmd bufwritepost *vimrc  source $MYVIMRC
+  "autocmd bufwritepost *gvimrc source $MYGVIMRC
 endif
