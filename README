@@ -11,6 +11,8 @@ git://github.com/tpope/vim-surround.git
 git://github.com/tpope/vim-cucumber.git
 git://github.com/tpope/vim-fugitive.git
 git://github.com/tpope/vim-rails.git
+git://github.com/vim-scripts/L9.git
+git://github.com/vim-scripts/FuzzyFinder.git
 
 USE:
 Once you're set up, just run vim.  Pathogen will take care of loading your plugins.
