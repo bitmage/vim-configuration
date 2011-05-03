@@ -13,7 +13,7 @@ map <F1> <nop>
 
 "setup display
 syntax on
-set list
+"set list
 set listchars=tab:->,trail:-
 set number "display line numbers
 set numberwidth=5
@@ -35,7 +35,7 @@ set nohlsearch
 set showmatch
 set ignorecase "ignore case when searching
 set smartcase
-set gdefault
+"set gdefault
 nnoremap / /\v
 vnoremap / /\v
 
