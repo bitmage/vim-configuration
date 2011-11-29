@@ -10,6 +10,7 @@ set modelines=0
 set noerrorbells
 set vb t_vb=""
 map <F1> <nop>
+set autoread
 
 "setup display
 syntax on
