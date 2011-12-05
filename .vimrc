@@ -5,6 +5,7 @@ call pathogen#helptags()
 filetype plugin indent on
 
 "disable annoying things
+set autoread
 set nocompatible
 set modelines=0
 set noerrorbells
