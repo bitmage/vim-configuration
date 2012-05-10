@@ -10,11 +10,12 @@ set modelines=0
 set noerrorbells
 set vb t_vb=""
 map <F1> <nop>
+map K <nop>
 set autoread
 
 "setup display
 syntax on
-"set list
+set list
 set listchars=tab:->,trail:-
 set number "display line numbers
 set numberwidth=5
@@ -54,6 +55,11 @@ set backspace=eol,indent,start "backspace over end of line, indent, and insertio
 set scrolloff=3
   "set iskeyword+=_,$,@,%,#
   "set linebreak
+nnoremap K i<CR><Esc>
+
+" Settings for slimv
+let g:lisp_rainbow = 1
+let g:slimv_leader = '\'
 
 "setup navigation
 nnoremap <tab> %
@@ -76,14 +82,24 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <leader>p :r !pbpaste<cr>
 nnoremap <leader>r :FufRenewCache<cr>
 nnoremap <leader>t :FufCoverageFile<cr>
+nnoremap <leader>x :w<cr>:!coffee %<cr>
+
+"conque, fuck yeah
+nnoremap <leader>s :ConqueTerm bash<cr>
+let g:ConqueTerm_PromptRegex = '^\w\+@[0-9A-Za-z_.-]\+:[0-9A-Za-z_./\~,:-]\+\$'
+let g:ConqueTerm_Color = 1
+let g:ConqueTerm_ReadUnfocused = 1
+
 "nnoremap <leader>cc !cucumber %:line(".")<cr>
 "nnoremap <leader>n <Esc>:let @*=line(".")<CR>
 
+"easy split screen nav
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"sudo save a file (if you forgot to sudo vim it)
 command! W w !sudo tee % >/dev/null
 
 "misc
