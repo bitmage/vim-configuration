@@ -12,3 +12,8 @@ highlight StatusLine gui=bold guifg=white guibg=blue
 set guifont=Monaco:h16
 colorscheme mustang
 set guioptions=egmrt
+highlight SignColumn guibg=black guifg=black
+highlight GitGutterAdd guibg=black guifg=green
+highlight GitGutterChange guibg=black guifg=yellow
+highlight GitGutterDelete guibg=black guifg=red
+highlight GitGutterChangeDelete guibg=black guifg=magenta

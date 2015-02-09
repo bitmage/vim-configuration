@@ -16,15 +16,9 @@
 [submodule "bundle/L9"]
 	path = bundle/L9
 	url = git://github.com/vim-scripts/L9.git
-[submodule "bundle/FuzzyFinder"]
-	path = bundle/FuzzyFinder
-	url = git://github.com/vim-scripts/FuzzyFinder.git
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = http://github.com/mileszs/ack.vim.git
-[submodule "bundle/slimv.vim"]
-	path = bundle/slimv.vim
-	url = https://github.com/vim-scripts/slimv.vim.git
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = http://github.com/tsaleh/vim-matchit.git
@@ -43,3 +37,21 @@
 [submodule "bundle/vim-conque"]
 	path = bundle/vim-conque
 	url = git://github.com/rson/vim-conque.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/bling/vim-airline
+[submodule "bundle/vim-fireplace"]
+	path = bundle/vim-fireplace
+	url = git@github.com:tpope/vim-fireplace.git
+[submodule "bundle/vim-clojure-static"]
+	path = bundle/vim-clojure-static
+	url = git@github.com:guns/vim-clojure-static.git
+[submodule "bundle/vim-sexp"]
+	path = bundle/vim-sexp
+	url = git@github.com:guns/vim-sexp.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim
