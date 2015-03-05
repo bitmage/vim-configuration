@@ -107,6 +107,7 @@ if executable('ag')
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
 endif
 
 "sudo save a file (if you forgot to sudo vim it)
@@ -114,7 +115,7 @@ command! W w !sudo tee % >/dev/null
 
 "misc
 let g:netrw_liststyle = 3 "display folders in treeview
-let g:ackprg="ack -H --nocolor --nogroup --column"
+let g:ackprg="ag --nocolor --nogroup --column -i"
 let g:airline_powerline_fonts = 1
 
 "reload config files when changed
