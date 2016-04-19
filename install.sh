@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#get submodules
-git submodule init
-git submodule update
-
 #move existing rc files
 if [ -f ~/.vimrc ]; then
   mv ~/.vimrc ~/.vimrc-moved
@@ -15,3 +11,8 @@ fi
 #add symlinks
 ln -s "$PWD/.vimrc" ~/.vimrc
 ln -s "$PWD/.gvimrc" ~/.gvimrc
+
+#get submodules
+git submodule init
+git submodule update
+
