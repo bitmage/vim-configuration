@@ -10,9 +10,6 @@
 [submodule "bundle/vim-ack"]
 	path = bundle/vim-ack
 	url = http://github.com/mileszs/ack.vim.git
-[submodule "vim-l9"]
-	path = vim-l9
-	url = https://github.com/eparreno/vim-l9.git
-[submodule "vim-syntastic"]
-	path = vim-syntastic
-	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim
