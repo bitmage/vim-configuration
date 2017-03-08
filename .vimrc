@@ -116,26 +116,3 @@ command! W w !sudo tee % >/dev/null
 "misc
 let g:netrw_liststyle = 3 "display folders in treeview
 let g:ackprg="ag --nocolor --nogroup --column -i"
-let g:airline_powerline_fonts = 1
-
-"reload config files when changed
-if has("autocmd")
-  "autocmd bufwritepost *vimrc  source $MYVIMRC
-  "autocmd bufwritepost *gvimrc source $MYGVIMRC
-endif
-let b:surround_{char2nr('=')} = "<%= \r %>"
-let b:surround_{char2nr('-')} = "<% \r %>"
-
-"FuzzyFinder should ignore all files in .gitignore
-let ignorefile = ".gitignore"
-if filereadable(ignorefile)
-
-  let ignore = '\v\~$'
-  for line in readfile(ignorefile)
-    let line = substitute(line, '\.', '\\.', 'g')
-    let line = substitute(line, '\*', '.*', 'g')
-    let ignore .= '|^' . line
-  endfor
-
-  let g:fuf_coveragefile_exclude = ignore
-endif
