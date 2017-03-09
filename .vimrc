@@ -88,6 +88,9 @@ nnoremap <leader>p :r !pbpaste<cr>
 nnoremap <leader>x :w<cr>:!coffee %<cr>
 nnoremap <leader>t :CtrlP<cr>
 
+"use lowercase s for surround in visual mode
+xmap s   <Plug>VSurround
+
 "xml folding
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
