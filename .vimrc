@@ -7,6 +7,7 @@ filetype plugin indent on
 "set swap file location
 set noswapfile
 "set backupdir=~/.vim/swap
+set backupcopy=yes
 
 "disable annoying things
 set nocompatible
@@ -81,22 +82,25 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>eg <C-w><C-v><C-l>:e $MYGVIMRC<cr>
 nnoremap <leader>ee <C-w><C-v><C-l>:e .<cr>
 nnoremap <leader>eh <C-w><C-v><C-l>:e ~/<cr>
-nnoremap <leader>j :CoffeeCompile<cr>
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader><space> :noh<cr>
-nnoremap <leader>p :r !pbpaste<cr>
+nnoremap <leader>p "+p<cr>
+map <leader>y "+y<cr>
 nnoremap <leader>x :w<cr>:!coffee %<cr>
 nnoremap <leader>t :CtrlP<cr>
+nnoremap <leader>d :tabe<cr>
+nnoremap <leader>f :Prettier<cr>
+
+"format json
+nnoremap <leader>j :%!python -m json.tool<cr>
+nnoremap <leader>w :q<cr>
+
 
 "use lowercase s for surround in visual mode
 xmap s   <Plug>VSurround
 
-"xml folding
-let g:xml_syntax_folding=1
-au FileType xml setlocal foldmethod=syntax
-
-"nnoremap <leader>cc !cucumber %:line(".")<cr>
-"nnoremap <leader>n <Esc>:let @*=line(".")<CR>
+" disable folding
+set nofoldenable
 
 "easy split screen nav
 nnoremap <C-h> <C-w>h
@@ -104,13 +108,16 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+if executable('rg')
+  " Use rg over Grep
+  set grepprg=rg\ -i\ --color=never
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  " Use rg in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
   let g:ctrlp_use_caching = 0
+
+  " Use rg in ack
+  let g:ackprg="rg -i --vimgrep --no-heading"
 endif
 
 "sudo save a file (if you forgot to sudo vim it)
@@ -118,4 +125,7 @@ command! W w !sudo tee % >/dev/null
 
 "misc
 let g:netrw_liststyle = 3 "display folders in treeview
-let g:ackprg="ag --nocolor --nogroup --column -i"
+let g:ipy_perform_mappings=0
+
+let g:ale_reason_ls_executable="reason-language-server"
+"let g:ale_linters = {'reason': ['ale-reasonml-language-server']}
