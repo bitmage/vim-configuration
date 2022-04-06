@@ -128,4 +128,4 @@ let g:netrw_liststyle = 3 "display folders in treeview
 let g:ipy_perform_mappings=0
 
 let g:ale_reason_ls_executable="reason-language-server"
-"let g:ale_linters = {'reason': ['ale-reasonml-language-server']}
+let g:ale_linters = {'markdown': ['markdownlint', 'mdl', 'proselint', 'redpen', 'remark_lint', 'textlint', 'vale', 'writegood']}
